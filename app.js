@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  trashTalk = trashTalkGenerator(req.body.target)
+  const trashTalk = trashTalkGenerator(req.body.target)
   res.render('index', { targets: list.target, trashTalk: trashTalk, target: req.body.target })
 })
 
